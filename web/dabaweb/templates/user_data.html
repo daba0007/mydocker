@@ -1,0 +1,31 @@
+{% extends 'index.html' %}
+{% block title %}用户数据{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading"><h2>用户数据</h2></div>
+            <div class="panel-body">
+                <table data-toggle="table" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name" data-sort-order="desc" id="table">
+                    <thead>
+                    <tr>
+                        <th data-field="checkbox" data-checkbox="true" >check</th>
+                        <th data-field="name" data-sortable="true">名字</th>
+                        <th data-field="money"  data-sortable="true">工资</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for userdata in User_datalist %}
+                    <tr>
+                        <td>1</td>
+                        <td>{{ userdata.name }}</td>
+                        <td>{{ userdata.money }}</td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

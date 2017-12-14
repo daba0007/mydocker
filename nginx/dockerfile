@@ -1,0 +1,6 @@
+FROM daba0007/nginx
+
+MAINTAINER daba0007                                                                 
+
+RUN rm /etc/nginx/conf.d/default.conf
+ADD nginx-conf/ /etc/nginx/conf.d/

@@ -1,0 +1,32 @@
+{% extends 'index.html' %}
+{% block title %}工号信息{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading"><h2>工号信息</h2></div>
+            <div class="panel-body">
+                <table data-toggle="table" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name" data-sort-order="desc" id="table2">
+                    <thead>
+                    <tr>
+                        <th data-field="checkbox" data-checkbox="true" >check</th>
+                        <th data-field="name" data-sortable="true">工号</th>
+                        <th data-field="money"  data-sortable="true">组名</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for codedata in Code_datalist %}
+                    <tr>
+                        <td>1</td>
+                        <td>{{ codedata.code }}</td>
+                        <td>{{ codedata.group }}</td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
