@@ -6,6 +6,12 @@
 
 所需知识：python,redis,mysql,django,nginx，linux操作知识
 
+逻辑图：
+```
+                                -> mysql
+web -> nginx -> uwsgi ->django       |
+                                -> redis
+```
 ### 预备工作
 安装docker
 ```bash
